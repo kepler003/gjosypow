@@ -1,0 +1,56 @@
+
+
+
+.button {
+  &-flex {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .position-relative;
+
+    & i {
+      position: absolute;
+    }
+  }
+  &-primary {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-primary;
+  }
+  &-secondary {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-secondary;
+  }
+  &-dark {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-dark;
+  }
+  &-danger {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-danger;
+  }
+  &-success {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-success;
+  }
+  &-info {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-info;
+  }
+  &-nav {
+    @extend .btn;
+    @extend .btn-outline-light;
+    @extend .text-secondary;
+    @extend .box;
+    @extend .box-center;
+    @extend .w-100;
+    @extend .p-2;
+  }
+}

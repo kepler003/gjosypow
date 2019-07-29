@@ -1,0 +1,103 @@
+
+
+// Custom wrappers
+
+.box {
+  display: flex;
+  @extend .flex-wrap;
+  @extend .m-0;
+  @extend .p-0;
+
+  &-start {
+    align-content: start;
+    align-items: start;
+    justify-content: start;
+  }
+
+  &-start-x {
+    justify-content: start;
+  }
+
+  &-start-y {
+    align-content: start;
+    align-items: start;
+  }
+
+  &-center {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-center-x {
+    justify-content: center;
+  }
+
+  &-center-y {
+    align-content: center;
+    align-items: center;
+  }
+
+  &-end {
+    align-content: end;
+    align-items: end;
+    justify-content: end;
+  }
+
+  &-end-x {
+    justify-content: end;
+  }
+
+  &-end-y {
+    align-content: end;
+    align-items: end;
+  }
+}
+
+// Section
+.section {
+  @extend .box;
+  @extend .w-100;
+  @extend .align-content-start;
+  @extend .bg-white;
+  @extend .m-sm-2;
+  @extend .rounded-sm-1rem;
+
+  &:nth-child(1):not(.section.custom-spacing) {
+    @extend .mt-0;
+  }
+
+  & > header {
+    @extend .box;
+    @extend .w-100;
+
+    & > h2 {
+      @extend .box;
+      @extend .flex-nowrap;
+      @extend .box-center-y;
+      @extend .w-100;
+      @extend .py-2;
+      @extend .px-3;
+      @extend .bg-secondary;
+      @extend .text-white;
+      @extend .rounded-t-sm-1rem;
+      @extend .h6;
+      @extend .font-weight-normal;
+
+      & span:nth-child(1) {
+        @extend .mr-2;
+        @extend .mb-0;
+        @extend .h5;
+      }
+    }
+  }
+
+  &.header {
+    &-primary { & > header > h2 { @extend .bg-primary; }}
+    &-dark { & > header > h2 { @extend .bg-dark; }}
+    &-info { & > header > h2 { @extend .bg-info; }}
+  }
+}
+
+
+

@@ -1,0 +1,91 @@
+
+
+
+// Translate
+
+.translate {
+  @for $i from 1 through 10 {
+    &-x {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-y {
+      &-#{$i}0 { transform: translateY(10% * $i); }
+      &-n#{$i}0 { transform: translateY(-10% * $i); }
+    }
+    &-#{$i}0 { transform: translate(10% * $i, 10% * $i); }
+    &-n#{$i}0 { transform: translate(-10% * $i, -10% * $i); }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  
+  .translate {
+    @for $i from 1 through 10 {
+    &-x-sm {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-y-sm {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-sm-#{$i}0 { transform: translate(10% * $i, 10% * $i); }
+    &-sm-n#{$i}0 { transform: translate(-10% * $i, -10% * $i); }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+      
+  .translate {
+    @for $i from 1 through 10 {
+    &-x-md {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-y-md {
+      &-#{$i}0 { transform: translateY(10% * $i); }
+      &-n#{$i}0 { transform: translateY(-10% * $i); }
+    }
+    &-md-#{$i}0 { transform: translate(10% * $i, 10% * $i); }
+    &-md-n#{$i}0 { transform: translate(-10% * $i, -10% * $i); }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+      
+  .translate {
+    @for $i from 1 through 10 {
+    &-x-lg {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-y-lg {
+      &-#{$i}0 { transform: translateY(10% * $i); }
+      &-n#{$i}0 { transform: translateY(-10% * $i); }
+    }
+    &-lg-#{$i}0 { transform: translate(10% * $i, 10% * $i); }
+    &-lg-n#{$i}0 { transform: translate(-10% * $i, -10% * $i); }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+      
+  .translate {
+    @for $i from 1 through 10 {
+    &-x-xl {
+      &-#{$i}0 { transform: translateX(10% * $i); }
+      &-n#{$i}0 { transform: translateX(-10% * $i); }
+    }
+    &-y-xl {
+      &-#{$i}0 { transform: translateY(10% * $i); }
+      &-n#{$i}0 { transform: translateY(-10% * $i); }
+    }
+    &-xl-#{$i}0 { transform: translate(10% * $i, 10% * $i); }
+    &-xl-n#{$i}0 { transform: translate(-10% * $i, -10% * $i); }
+    }
+  }
+}

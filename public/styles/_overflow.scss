@@ -1,0 +1,102 @@
+
+
+
+// Overflow
+
+.overflow {
+  &-hidden { overflow: hidden !important; }
+  &-scroll { overflow: scroll !important; }
+  &-auto { overflow: auto !important; }
+
+  &-x {
+    &-hidden { overflow-x: hidden !important; }
+    &-scroll { overflow-x: scroll !important; }
+    &-auto { overflow-x: auto !important; }
+  }
+
+  &-y {
+    &-hidden { overflow-y: hidden !important; }
+    &-scroll { overflow-y: scroll !important; }
+    &-auto { overflow-y: auto !important; }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .overflow {
+    &-sm-hidden { overflow: hidden !important; }
+    &-sm-scroll { overflow: scroll !important; }
+    &-sm-auto { overflow: auto !important; }
+  
+    &-x {
+      &-sm-hidden { overflow-x: hidden !important; }
+      &-sm-scroll { overflow-x: scroll !important; }
+      &-sm-auto { overflow-x: auto !important; }
+    }
+  
+    &-y {
+      &-sm-hidden { overflow-y: hidden !important; }
+      &-sm-scroll { overflow-y: scroll !important; }
+      &-sm-auto { overflow-y: auto !important; }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .overflow {
+    &-md-hidden { overflow: hidden !important; }
+    &-md-scroll { overflow: scroll !important; }
+    &-md-auto { overflow: auto !important; }
+  
+    &-x {
+      &-md-hidden { overflow-x: hidden !important; }
+      &-md-scroll { overflow-x: scroll !important; }
+      &-md-auto { overflow-x: auto !important; }
+    }
+  
+    &-y {
+      &-md-hidden { overflow-y: hidden !important; }
+      &-md-scroll { overflow-y: scroll !important; }
+      &-md-auto { overflow-y: auto !important; }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .overflow {
+    &-lg-hidden { overflow: hidden !important; }
+    &-lg-scroll { overflow: scroll !important; }
+    &-lg-auto { overflow: auto !important; }
+  
+    &-x {
+      &-lg-hidden { overflow-x: hidden !important; }
+      &-lg-scroll { overflow-x: scroll !important; }
+      &-lg-auto { overflow-x: auto !important; }
+    }
+  
+    &-y {
+      &-lg-hidden { overflow-y: hidden !important; }
+      &-lg-scroll { overflow-y: scroll !important; }
+      &-lg-auto { overflow-y: auto !important; }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .overflow {
+    &-xl-hidden { overflow: hidden !important; }
+    &-xl-scroll { overflow: scroll !important; }
+    &-xl-auto { overflow: auto !important; }
+  
+    &-x {
+      &-xl-hidden { overflow-x: hidden !important; }
+      &-xl-scroll { overflow-x: scroll !important; }
+      &-xl-auto { overflow-x: auto !important; }
+    }
+  
+    &-y {
+      &-xl-hidden { overflow-y: hidden !important; }
+      &-xl-scroll { overflow-y: scroll !important; }
+      &-xl-auto { overflow-y: auto !important; }
+    }
+  }
+}

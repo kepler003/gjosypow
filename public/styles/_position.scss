@@ -1,0 +1,196 @@
+
+
+
+// Position
+
+@include media-breakpoint-up(sm) {
+  .position {
+    &-sm-static { position: static !important; }
+    &-sm-absolute { position: absolute !important; }
+    &-sm-relative { position: relative !important; }
+    &-sm-fixed { position: relative !important; }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .position {
+    &-md-static { position: static !important; }
+    &-md-absolute { position: absolute !important; }
+    &-md-relative { position: relative !important; }
+    &-md-fixed { position: relative !important; }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .position {
+    &-lg-static { position: static !important; }
+    &-lg-absolute { position: absolute !important; }
+    &-lg-relative { position: relative !important; }
+    &-lg-fixed { position: relative !important; }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .position {
+    &-xl-static { position: static !important; }
+    &-xl-absolute { position: absolute !important; }
+    &-xl-relative { position: relative !important; }
+    &-xl-fixed { position: relative !important; }
+  }
+}
+
+
+
+// Position directions
+
+.top {
+    @for $i from 0 through 60 {
+        &-#{$i} { top: 1px * $i !important; }
+        &-n#{$i} { top: -1px * $i !important; }
+    }
+}
+
+.bottom {
+    @for $i from 0 through 60 {
+        &-#{$i} { bottom: 1px * $i !important; }
+        &-n#{$i} { bottom: -1px * $i !important; }
+    }
+}
+
+.left {
+    @for $i from 0 through 60 {
+        &-#{$i} { left: 1px * $i !important; }
+        &-n#{$i} { left: -1px * $i !important; }
+    }
+}
+
+.right {
+    @for $i from 0 through 60 {
+        &-#{$i} { right: 1px * $i !important; }
+        &-n#{$i} { right: -1px * $i !important; }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    
+  .top {
+      @for $i from 0 through 60 {
+          &-sm-#{$i} { top: 1px * $i !important; }
+          &-sm-n#{$i} { top: -1px * $i !important; }
+      }
+  }
+
+  .bottom {
+      @for $i from 0 through 60 {
+          &-sm-#{$i} { bottom: 1px * $i !important; }
+          &-sm-n#{$i} { bottom: -1px * $i !important; }
+      }
+  }
+
+  .left {
+      @for $i from 0 through 60 {
+          &-sm-#{$i} { left: 1px * $i !important; }
+          &-sm-n#{$i} { left: -1px * $i !important; }
+      }
+  }
+
+  .right {
+      @for $i from 0 through 60 {
+          &-sm-#{$i} { right: 1px * $i !important; }
+          &-sm-n#{$i} { right: -1px * $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(md) {
+    
+  .top {
+      @for $i from 0 through 60 {
+          &-md-#{$i} { top: 1px * $i !important; }
+          &-md-n#{$i} { top: -1px * $i !important; }
+      }
+  }
+
+  .bottom {
+      @for $i from 0 through 60 {
+          &-md-#{$i} { bottom: 1px * $i !important; }
+          &-md-n#{$i} { bottom: -1px * $i !important; }
+      }
+  }
+
+  .left {
+      @for $i from 0 through 60 {
+          &-md-#{$i} { left: 1px * $i !important; }
+          &-md-n#{$i} { left: -1px * $i !important; }
+      }
+  }
+
+  .right {
+      @for $i from 0 through 60 {
+          &-md-#{$i} { right: 1px * $i !important; }
+          &-md-n#{$i} { right: -1px * $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+    
+  .top {
+      @for $i from 0 through 60 {
+          &-lg-#{$i} { top: 1px * $i !important; }
+          &-lg-n#{$i} { top: -1px * $i !important; }
+      }
+  }
+
+  .bottom {
+      @for $i from 0 through 60 {
+          &-lg-#{$i} { bottom: 1px * $i !important; }
+          &-lg-n#{$i} { bottom: -1px * $i !important; }
+      }
+  }
+
+  .left {
+      @for $i from 0 through 60 {
+          &-lg-#{$i} { left: 1px * $i !important; }
+          &-lg-n#{$i} { left: -1px * $i !important; }
+      }
+  }
+
+  .right {
+      @for $i from 0 through 60 {
+          &-lg-#{$i} { right: 1px * $i !important; }
+          &-lg-n#{$i} { right: -1px * $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+    
+  .top {
+      @for $i from 0 through 60 {
+          &-xl-#{$i} { top: 1px * $i !important; }
+          &-xl-n#{$i} { top: -1px * $i !important; }
+      }
+  }
+
+  .bottom {
+      @for $i from 0 through 60 {
+          &-xl-#{$i} { bottom: 1px * $i !important; }
+          &-xl-n#{$i} { bottom: -1px * $i !important; }
+      }
+  }
+
+  .left {
+      @for $i from 0 through 60 {
+          &-xl-#{$i} { left: 1px * $i !important; }
+          &-xl-n#{$i} { left: -1px * $i !important; }
+      }
+  }
+
+  .right {
+      @for $i from 0 through 60 {
+          &-xl-#{$i} { right: 1px * $i !important; }
+          &-xl-n#{$i} { right: -1px * $i !important; }
+      }
+  }
+}

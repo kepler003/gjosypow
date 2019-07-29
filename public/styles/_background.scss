@@ -1,0 +1,109 @@
+
+
+
+// Background color
+
+.bg {
+  &-trans { background-color: transparent !important; }
+}
+
+@include media-breakpoint-up(xs) {
+  .bg {
+    @for $i from 1 through 9 {
+        &-gray-#{$i}00 { background-color: map-get($grays, '#{$i}00') !important }
+    }
+    
+    @for $i from 1 through 10 {
+      &-light-#{$i} {
+        background-color: rgba(255, 255, 255, 0.1 * $i);
+      }
+      &-dark-#{$i} {
+        background-color: rgba(0, 0, 0, 0.1 * $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .bg {
+    &-sm-trans { background-color: transparent !important; }
+    
+    @for $i from 1 through 9 {
+        &-sm-gray-#{$i}00 { background-color: map-get($grays, '#{$i}00') !important }
+    }
+
+    @for $i from 1 through 10 {
+      &-sm-light-#{$i} {
+        background-color: rgba(255, 255, 255, 0.1 * $i);
+      }
+      &-sm-dark-#{$i} {
+        background-color: rgba(0, 0, 0, 0.1 * $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bg {
+    &-md-trans { background-color: transparent !important; }
+    
+    @for $i from 1 through 9 {
+        &-md-gray-#{$i}00 { background-color: map-get($grays, '#{$i}00') !important }
+    }
+    
+    @for $i from 1 through 10 {
+      &-sm-light-#{$i} {
+        background-color: rgba(255, 255, 255, 0.1 * $i);
+      }
+      &-sm-dark-#{$i} {
+        background-color: rgba(0, 0, 0, 0.1 * $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bg {
+    &-lg-trans { background-color: transparent !important; }
+    
+    @for $i from 1 through 9 {
+        &-lg-gray-#{$i}00 { background-color: map-get($grays, '#{$i}00') !important }
+    }
+    
+    @for $i from 1 through 10 {
+      &-sm-light-#{$i} {
+        background-color: rgba(255, 255, 255, 0.1 * $i);
+      }
+      &-sm-dark-#{$i} {
+        background-color: rgba(0, 0, 0, 0.1 * $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bg {
+    &-xl-trans { background-color: transparent !important; }
+    
+    @for $i from 1 through 9 {
+        &-xl-gray-#{$i}00 { background-color: map-get($grays, '#{$i}00') !important }
+    }
+    
+    @for $i from 1 through 10 {
+      &-sm-light-#{$i} {
+        background-color: rgba(255, 255, 255, 0.1 * $i);
+      }
+      &-sm-dark-#{$i} {
+        background-color: rgba(0, 0, 0, 0.1 * $i);
+      }
+    }
+  }
+}
+
+
+
+// Gradient
+
+.bg-gradient {
+  background: linear-gradient(to top right, rgb(253, 61, 109), rgb(92, 143, 201));
+}

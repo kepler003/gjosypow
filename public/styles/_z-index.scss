@@ -1,0 +1,42 @@
+
+
+
+// Z-index
+
+.z-index {
+  @for $i from 0 through 100 {
+      &-#{$i} { z-index: $i !important; }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .z-index {
+      @for $i from 0 through 100 {
+          &-sm-#{$i} { z-index: $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .z-index {
+      @for $i from 0 through 100 {
+          &-md-#{$i} { z-index: $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .z-index {
+      @for $i from 0 through 100 {
+          &-lg-#{$i} { z-index: $i !important; }
+      }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .z-index {
+      @for $i from 0 through 100 {
+          &-xl-#{$i} { z-index: $i !important; }
+      }
+  }
+}

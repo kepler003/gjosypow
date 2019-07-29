@@ -1,0 +1,62 @@
+
+
+
+// Opacity
+
+.opacity {
+  @for $i from 0 through 10 {
+      &-#{$i} { opacity: 0.1 * $i !important }
+  }
+
+  &-hover{ transition: 150ms ease !important }
+
+  &-hover:hover { opacity: 1 !important }
+}
+
+@include media-breakpoint-up(sm) {
+  .opacity {
+    @for $i from 0 through 10 {
+        &-sm-#{$i} { opacity: 0.1 * $i !important }
+    }
+  
+    &-sm-hover{ transition: 150ms ease !important }
+  
+    &-sm-hover:hover { opacity: 1 !important }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .opacity {
+    @for $i from 0 through 10 {
+        &-md-#{$i} { opacity: 0.1 * $i !important }
+    }
+  
+    &-md-hover{ transition: 150ms ease !important }
+  
+    &-md-hover:hover { opacity: 1 !important }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .opacity {
+    @for $i from 0 through 10 {
+        &-lg-#{$i} { opacity: 0.1 * $i !important }
+    }
+  
+    &-lg-hover{ transition: 150ms ease !important }
+  
+    &-lg-hover:hover { opacity: 1 !important }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .opacity {
+    @for $i from 0 through 10 {
+        &-xl-#{$i} { opacity: 0.1 * $i !important }
+    }
+  
+    &-xl-hover{ transition: 150ms ease !important }
+  
+    &-xl-hover:hover { opacity: 1 !important }
+  }
+}

@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 
 
+
 //____________________________________________________ INITIALIZE SETTINGS
 
 // Set views directory
@@ -26,15 +27,13 @@ app.use(bodyParser.json());
 
 
 
+
 //____________________________________________________ MIDDLEWARE CALLED ON EVERY ROUTE
 //app.use(require('./middlewares/updateDB.js'));
 
 //____________________________________________________ ROUTES
 
-//app.use('/', require('./controllers/main.js'));
-app.use('/', (req, res) => {
-  res.send("Hello there Bartek");
-});
+app.use('/', require('./controllers/main.js'));
 
 
 
@@ -45,4 +44,3 @@ app.listen(3000, function(){
 });
 
 
-//____________________________________________________ SOCKET SETUP

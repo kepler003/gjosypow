@@ -1,0 +1,157 @@
+
+
+
+// Height
+
+.h {
+    &-auto { height: auto !important; }
+
+    @for $i from 3 through 20 {
+        &-#{$i}00p { height: 100px * $i !important; }
+        &-#{$i}00vh { height: 100vh * $i !important; }
+
+        &-min-#{$i}00p { min-height: 100px * $i !important; }
+        &-min-#{$i}00vh { min-height: 100vh * $i !important; }
+    
+        &-max-#{$i}00p { max-height: 100px * $i !important; }
+        &-max-#{$i}00vh { max-height: 100vh * $i !important; }
+        }
+        
+    @for $i from 1 through 20 {
+        @for $j from 0 through 1 {
+            &-#{$i}#{$j*5}p { height: 0px + $i * 10 + ($j * 5) !important }
+            &-#{$i}#{$j*5}vh { height: 0vh + $i * 10 + ($j * 5) !important }
+
+            &-min-#{$i}#{$j*5}p { min-height: 0px + $i * 10 + ($j * 5) !important }
+            &-min-#{$i}#{$j*5}vh { min-height: 0vh + $i * 10 + ($j * 5) !important }
+
+            &-max-#{$i}#{$j*5}p { max-height: 0px + $i * 10 + ($j * 5) !important }
+            &-max-#{$i}#{$j*5}vh { max-height: 0vh + $i * 10 + ($j * 5) !important }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    
+    .h {
+        &-sm-auto { height: auto !important; }
+
+        @for $i from 3 through 20 {
+            &-sm-#{$i}00p { height: 100px * $i !important; }
+            &-sm-#{$i}00vh { height: 100vh * $i !important; }
+
+            &-min-sm-#{$i}00p { min-height: 100px * $i !important; }
+            &-min-sm-#{$i}00vh { min-height: 100vh * $i !important; }
+        
+            &-max-sm-#{$i}00p { max-height: 100px * $i !important; }
+            &-max-sm-#{$i}00vh { max-height: 100vh * $i !important; }
+            }
+            
+        @for $i from 1 through 20 {
+            @for $j from 0 through 1 {
+                &-sm-#{$i}#{$j*5}p { height: 0px + $i * 10 + ($j * 5) !important }
+                &-sm-#{$i}#{$j*5}vh { height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-min-sm-#{$i}#{$j*5}p { min-height: 0px + $i * 10 + ($j * 5) !important }
+                &-min-sm-#{$i}#{$j*5}vh { min-height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-max-sm-#{$i}#{$j*5}p { max-height: 0px + $i * 10 + ($j * 5) !important }
+                &-max-sm-#{$i}#{$j*5}vh { max-height: 0vh + $i * 10 + ($j * 5) !important }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+  
+    .h {
+        &-md-auto { height: auto !important; }
+
+        @for $i from 3 through 20 {
+            &-md-#{$i}00p { height: 100px * $i !important; }
+            &-md-#{$i}00vh { height: 100vh * $i !important; }
+
+            &-min-md-#{$i}00p { min-height: 100px * $i !important; }
+            &-min-md-#{$i}00vh { min-height: 100vh * $i !important; }
+        
+            &-max-md-#{$i}00p { max-height: 100px * $i !important; }
+            &-max-md-#{$i}00vh { max-height: 100vh * $i !important; }
+            }
+            
+        @for $i from 1 through 20 {
+            @for $j from 0 through 1 {
+                &-md-#{$i}#{$j*5}p { height: 0px + $i * 10 + ($j * 5) !important }
+                &-md-#{$i}#{$j*5}vh { height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-min-md-#{$i}#{$j*5}p { min-height: 0px + $i * 10 + ($j * 5) !important }
+                &-min-md-#{$i}#{$j*5}vh { min-height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-max-md-#{$i}#{$j*5}p { max-height: 0px + $i * 10 + ($j * 5) !important }
+                &-max-md-#{$i}#{$j*5}vh { max-height: 0vh + $i * 10 + ($j * 5) !important }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+  
+    .h {
+        &-lg-auto { height: auto !important; }
+
+        @for $i from 3 through 20 {
+            &-lg-#{$i}00p { height: 100px * $i !important; }
+            &-lg-#{$i}00vh { height: 100vh * $i !important; }
+
+            &-min-lg-#{$i}00p { min-height: 100px * $i !important; }
+            &-min-lg-#{$i}00vh { min-height: 100vh * $i !important; }
+        
+            &-max-lg-#{$i}00p { max-height: 100px * $i !important; }
+            &-max-lg-#{$i}00vh { max-height: 100vh * $i !important; }
+            }
+            
+        @for $i from 1 through 20 {
+            @for $j from 0 through 1 {
+                &-lg-#{$i}#{$j*5}p { height: 0px + $i * 10 + ($j * 5) !important }
+                &-lg-#{$i}#{$j*5}vh { height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-min-lg-#{$i}#{$j*5}p { min-height: 0px + $i * 10 + ($j * 5) !important }
+                &-min-lg-#{$i}#{$j*5}vh { min-height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-max-lg-#{$i}#{$j*5}p { max-height: 0px + $i * 10 + ($j * 5) !important }
+                &-max-lg-#{$i}#{$j*5}vh { max-height: 0vh + $i * 10 + ($j * 5) !important }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+  
+    .h {
+        &-xl-auto { height: auto !important; }
+
+        @for $i from 3 through 20 {
+            &-xl-#{$i}00p { height: 100px * $i !important; }
+            &-xl-#{$i}00vh { height: 100vh * $i !important; }
+
+            &-min-xl-#{$i}00p { min-height: 100px * $i !important; }
+            &-min-xl-#{$i}00vh { min-height: 100vh * $i !important; }
+        
+            &-max-xl-#{$i}00p { max-height: 100px * $i !important; }
+            &-max-xl-#{$i}00vh { max-height: 100vh * $i !important; }
+            }
+            
+        @for $i from 1 through 20 {
+            @for $j from 0 through 1 {
+                &-xl-#{$i}#{$j*5}p { height: 0px + $i * 10 + ($j * 5) !important }
+                &-xl-#{$i}#{$j*5}vh { height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-min-xl-#{$i}#{$j*5}p { min-height: 0px + $i * 10 + ($j * 5) !important }
+                &-min-xl-#{$i}#{$j*5}vh { min-height: 0vh + $i * 10 + ($j * 5) !important }
+
+                &-max-xl-#{$i}#{$j*5}p { max-height: 0px + $i * 10 + ($j * 5) !important }
+                &-max-xl-#{$i}#{$j*5}vh { max-height: 0vh + $i * 10 + ($j * 5) !important }
+            }
+        }
+    }
+}
+
