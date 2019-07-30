@@ -14,7 +14,7 @@ html(lang="pl")
 
     link(href="/styles/main.css" rel="stylesheet" type="text/css")
 
-  body(class="pb-5 mb-5")
+  body
 
     div(class="container-fluid   p-0")
 
@@ -28,18 +28,25 @@ html(lang="pl")
 
             img(src="./images/gaba.JPG" class="box   w-100   position-absolute top-n10" alt="")
 
-          // Heading
+          // Info
           article(class="box flex-column align-items-center   w-100 h-50   py-4   bg-white")
-
+            
+            // Heading
             h1(class="box box-center   h6")
 
-              span(class="mb-2 small opacity-7") Cześć, jestem
-              span(class="h4") Gabriela Josypów
+              span(class="mb-2   small opacity-7 text-center") Cześć, jestem
+              span(class="h4 text-center") Gabriela Josypów
 
-            button(type="button" class="btn btn-primary   mt-auto   rounded-10rem") Poznaj mnie
+            // Action btns
+            div(class="box box-center   w-100   mt-auto")
 
-              i(class="fas fa-arrow-down   ml-2   opacity-7")
-      
+              a(href="#" class="btn btn-light   box box-center   w-40p h-40p   mx-1 p-0   text-primary rounded-10rem") <i class="fab fa-facebook-f"></i>
+              a(href="#" class="btn btn-light   box box-center   w-40p h-40p   mx-1 p-0   text-primary rounded-10rem") <i class="fab fa-instagram"></i>
+
+              button(type="button" class="btn btn-primary   w-40p h-40p   mx-1 p-0   mt-auto   rounded-10rem")
+
+                i(class="fas fa-arrow-down")
+        
       // Main
       main(class="box   w-100")
 
