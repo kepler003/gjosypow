@@ -4,6 +4,9 @@
 // Width
 
 .w {
+
+    &-auto { width: auto !important; }
+
     @for $i from 3 through 20 {
         &-#{$i}00p { width: 100px * $i !important }
         &-max-#{$i}00p { max-width: 100px * $i !important }
@@ -22,6 +25,9 @@
 @include media-breakpoint-up(sm) {
     
     .w {
+
+        &-sm-auto { width: auto !important; }
+
         @for $i from 3 through 20 {
             &-sm-#{$i}00p { width: 100px * $i !important }
             &-max-sm-#{$i}00p { max-width: 100px * $i !important }
@@ -41,6 +47,9 @@
 @include media-breakpoint-up(md) {
     
     .w {
+        
+        &-md-auto { width: auto !important; }
+    
         @for $i from 3 through 20 {
             &-md-#{$i}00p { width: 100px * $i !important }
             &-max-md-#{$i}00p { max-width: 100px * $i !important }
@@ -58,8 +67,11 @@
 }
 
 @include media-breakpoint-up(lg) {
-    
+
     .w {
+        
+        &-lg-auto { width: auto !important; }
+
         @for $i from 3 through 20 {
             &-lg-#{$i}00p { width: 100px * $i !important }
             &-max-lg-#{$i}00p { max-width: 100px * $i !important }
@@ -79,6 +91,9 @@
 @include media-breakpoint-up(xl) {
     
     .w {
+        
+        &-xl-auto { width: auto !important; }
+    
         @for $i from 3 through 20 {
             &-xl-#{$i}00p { width: 100px * $i !important }
             &-max-xl-#{$i}00p { max-width: 100px * $i !important }

@@ -24,18 +24,18 @@ html(lang="pl")
         div(class="box   w-100 h-100   rounded rounded-1rem overflow-hidden")
 
           // Photo
-          article(class="box box-center   w-100 h-50   overflow-hidden   position-relative")
+          article(class="header__article--photo   box box-center   w-100 h-min-300p   overflow-hidden   position-relative")
 
-            img(src="./images/gaba.JPG" class="box   w-100   position-absolute top-n10" alt="")
+            img(src="./images/gaba.JPG" class="box   w-100 w-max-270p   rounded-t-1rem   position-absolute top-0" alt="")
 
           // Info
-          article(class="box flex-column align-items-center   w-100 h-50   py-4   bg-white")
+          article(class="box flex-column align-items-center   w-100   py-4   bg-white")
             
             // Heading
             h1(class="box box-center   h6")
 
-              span(class="mb-2   small opacity-7 text-center") Cześć, jestem
-              span(class="h4 text-center") Gabriela Josypów
+              span(class="w-100   mb-2   small opacity-7 text-center") Cześć, jestem
+              span(class="w-100   h4 text-center") Gabriela Josypów
 
             // Action btns
             div(class="box box-center   w-100   mt-auto")
@@ -51,32 +51,42 @@ html(lang="pl")
       main(class="box   w-100")
 
         // About me
-        article(class="box   w-100   p-3")
+        article(class="box box-start-y   w-100   p-3 p-sm-4")
 
-          header(class="box box-center   w-100   px-2 py-4")
+          // info
+          div(class="box box-center   col-12 col-md-6   mt-lg-5 py-md-4 px-md-3 pl-lg-5 pr-lg-0")
+            
+            header(class="box box-center   w-100   px-2 py-4")
 
-            h2(class="h3")
+              h2(class="h3")
 
-              i(class="fas fa-user")
-              span(class="ml-3") O mnie
-          
-          div(class="p-2")
+                i(class="fas fa-user")
+                span(class="ml-3") O mnie
+            
+            div(class="p-2")
 
-            p(class="m-0") Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet sequi vero laboriosam eum accusamus maiores sed incidunt dicta, dolorem accusantium explicabo labore similique earum libero placeat voluptas, at esse architecto laborum minima iure. Placeat labore neque porro rem eaque iusto modi repudiandae doloremque quae non illum, nobis aperiam itaque!
+              p(class="m-0") Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet sequi vero laboriosam eum accusamus maiores sed incidunt dicta, dolorem accusantium explicabo labore similique earum libero placeat voluptas, at esse architecto laborum minima iure. Placeat labore neque porro rem eaque iusto modi repudiandae doloremque quae non illum, nobis aperiam itaque!
+
+          // Photo
+          div(class="d-none d-md-flex   box box-center   col-6   p-4")
+
+            div(class="main__article__photo--about   box box-center   w-100   p-lg-5 m-lg-3   position-relative")
+
+              img(src="./images/gaba2.jpg" class="w-100" alt="Gabriela Josypów image")
 
         // Education
-        article(class="main__article--education   box   w-100   p-3   bg-primary text-white")
+        article(class="main__article--education   box   w-100   p-3 p-lg-0   bg-primary text-white")
 
           // High school
           section(class="main__education__school   box   w-100   p-2" style="display: none;")
 
             // Photo
-            div(class="main__article__photo--education   w-100 h-200p   position-relative")
+            div(class="main__article__photo--education   w-100 w-max-280p h-200p   mx-auto   position-relative")
 
               div(class="w-100 h-100   overflow-hidden")
 
-                img(src="./images/liceum.jpg" class="h-100   position-relative right-25" alt="High school building")
-            
+                img(src="./images/liceum.jpg" class="h-100   position-relative" alt="High school building")
+                
             // Heading
             h3(class="w-100   pb-3 pt-4   text-center")
 
@@ -87,26 +97,29 @@ html(lang="pl")
             p(class="m-0") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum soluta qui fuga delectus, neque consequuntur blanditiis quod quae facilis ea quisquam magnam molestias vero voluptates enim natus tenetur inventore repellendus corrupti ab veniam rem quibusdam a obcaecati? Totam enim laborum impedit assumenda quas delectus, quos, tenetur similique ut odit consectetur.
 
           // Studies
-          section(class="main__education__studies   box   w-100   p-2")
+          section(class="main__education__studies   box   w-100   p-2 p-lg-0")
 
             // Photo
-            div(class="main__article__photo--education   w-100 h-200p   position-relative")
+            div(class="main__article__photo--education   w-100 w-sm-auto h-200p h-lg-auto col-lg-6   mx-auto px-0   position-relative")
 
-              div(class="w-100 h-100   overflow-hidden")
+              div(class="w-100 w-max-280p w-max-lg-2000p h-100   overflow-hidden")
 
-                img(src="./images/uj.jpg" class="h-100   position-relative right-25" alt="Studies building")
+                img(src="./images/uj.jpg" class="h-100 h-lg-auto   position-relative" alt="Studies building")
             
-            // Heading
-            h3(class="w-100   pb-3 pt-4   text-center")
+            // Info
+            div(class="box box-start   w-100 col-lg-6   px-lg-5")
+              
+              // Heading
+              h3(class="w-100   pb-3 pt-4 py-lg-4 my-lg-3   text-center")
 
-              i(class="fas fa-university")
-              span(class="ml-3") Studia
+                i(class="fas fa-university")
+                span(class="ml-3") Studia
 
-            // Body text
-            p(class="m-0") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum soluta qui fuga delectus, neque consequuntur blanditiis quod quae facilis ea quisquam magnam molestias vero voluptates enim natus tenetur inventore repellendus corrupti ab veniam rem quibusdam a obcaecati? Totam enim laborum impedit assumenda quas delectus, quos, tenetur similique ut odit consectetur.
+              // Body text
+              p(class="m-0") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum soluta qui fuga delectus, neque consequuntur blanditiis quod quae facilis ea quisquam magnam molestias vero voluptates enim natus tenetur inventore repellendus corrupti ab veniam rem quibusdam a obcaecati? Totam enim laborum impedit assumenda quas delectus, quos, tenetur similique ut odit consectetur.
 
           // Nav
-          section(class="box box-center   w-100   pt-4 pb-3")
+          section(class="d-lg-none   box box-center   w-100   pt-4 pb-3")
 
             button(type="button" class="main__education__btn--school   btn btn-outline-light   w-min-30p h-min-30p   mx-2 p-0   rounded-10rem border-2p"
                   onclick="changeDisplay('.main__education__school, .main__education__studies', 'fadeIn, hide', '300, 0');  addClass('.main__education__btn--school', 'active'); removeClass('.main__education__btn--studies', 'active'); scrollToElement('.main__article--education', '0', '300');")
