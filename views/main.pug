@@ -1,8 +1,10 @@
 doctype html
-html
+html(lang="pl")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
     title Gabriela Josypów
     
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
@@ -12,7 +14,510 @@ html
 
     link(href="/styles/main.css" rel="stylesheet" type="text/css")
 
-  body
+  body(class="pb-5 mb-5")
 
-    
+    div(class="container-fluid   p-0")
+
+      // Header
+      header(class="header   box   w-100 h-100vh   p-4")
+
+        div(class="box   w-100 h-100   rounded rounded-1rem overflow-hidden")
+
+          // Photo
+          article(class="box box-center   w-100 h-50   overflow-hidden   position-relative")
+
+            img(src="./images/gaba.JPG" class="box   w-100   position-absolute top-n10" alt="")
+
+          // Heading
+          article(class="box flex-column align-items-center   w-100 h-50   py-4   bg-white")
+
+            h1(class="box box-center   h6")
+
+              span(class="mb-2 small opacity-7") Cześć, jestem
+              span(class="h4") Gabriela Josypów
+
+            button(type="button" class="btn btn-primary   mt-auto   rounded-10rem") Poznaj mnie
+
+              i(class="fas fa-arrow-down   ml-2   opacity-7")
+      
+      // Main
+      main(class="box   w-100")
+
+        // About me
+        article(class="box   w-100   p-3")
+
+          header(class="box box-center   w-100   px-2 py-4")
+
+            h2(class="h3")
+
+              i(class="fas fa-user")
+              span(class="ml-3") O mnie
+          
+          div(class="p-2")
+
+            p(class="m-0") Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eveniet sequi vero laboriosam eum accusamus maiores sed incidunt dicta, dolorem accusantium explicabo labore similique earum libero placeat voluptas, at esse architecto laborum minima iure. Placeat labore neque porro rem eaque iusto modi repudiandae doloremque quae non illum, nobis aperiam itaque!
+
+        // Education
+        article(class="main__article--education   box   w-100   p-3   bg-primary text-white")
+
+          // High school
+          section(class="main__education__school   box   w-100   p-2" style="display: none;")
+
+            // Photo
+            div(class="main__article__photo--education   w-100 h-200p   position-relative")
+
+              div(class="w-100 h-100   overflow-hidden")
+
+                img(src="./images/liceum.jpg" class="h-100   position-relative right-25" alt="High school building")
+            
+            // Heading
+            h3(class="w-100   pb-3 pt-4   text-center")
+
+              i(class="fas fa-school")
+              span(class="ml-3") Liceum
+
+            // Body text
+            p(class="m-0") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum soluta qui fuga delectus, neque consequuntur blanditiis quod quae facilis ea quisquam magnam molestias vero voluptates enim natus tenetur inventore repellendus corrupti ab veniam rem quibusdam a obcaecati? Totam enim laborum impedit assumenda quas delectus, quos, tenetur similique ut odit consectetur.
+
+          // Studies
+          section(class="main__education__studies   box   w-100   p-2")
+
+            // Photo
+            div(class="main__article__photo--education   w-100 h-200p   position-relative")
+
+              div(class="w-100 h-100   overflow-hidden")
+
+                img(src="./images/uj.jpg" class="h-100   position-relative right-25" alt="Studies building")
+            
+            // Heading
+            h3(class="w-100   pb-3 pt-4   text-center")
+
+              i(class="fas fa-university")
+              span(class="ml-3") Studia
+
+            // Body text
+            p(class="m-0") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum soluta qui fuga delectus, neque consequuntur blanditiis quod quae facilis ea quisquam magnam molestias vero voluptates enim natus tenetur inventore repellendus corrupti ab veniam rem quibusdam a obcaecati? Totam enim laborum impedit assumenda quas delectus, quos, tenetur similique ut odit consectetur.
+
+          // Nav
+          section(class="box box-center   w-100   pt-4 pb-3")
+
+            button(type="button" class="main__education__btn--school   btn btn-outline-light   w-min-30p h-min-30p   mx-2 p-0   rounded-10rem border-2p"
+                  onclick="changeDisplay('.main__education__school, .main__education__studies', 'fadeIn, hide', '300, 0');  addClass('.main__education__btn--school', 'active'); removeClass('.main__education__btn--studies', 'active'); scrollToElement('.main__article--education', '0', '300');")
+
+            button(type="button" class="main__education__btn--studies   btn btn-outline-light active   w-min-30p h-min-30p   mx-2 p-0   rounded-10rem border-2p"
+                  onclick="changeDisplay('.main__education__studies, .main__education__school', 'fadeIn, hide', '300, 0');  addClass('.main__education__btn--studies', 'active'); removeClass('.main__education__btn--school', 'active'); scrollToElement('.main__article--education', '0', '300');")
+        
+        // Working exprience
+        article(class="box   w-100   p-3")
+
+          // Header
+          header(class="box box-center   w-100   px-2 pb-5 pt-4 mt-2")
+
+            h2(class="box box-center flex-nowrap   h3 text-center")
+
+              i(class="fas fa-briefcase")
+              span(class="ml-3") Doświadczenie zawodowe
+          
+          // Body
+          div(class="w-100   p-2")
+
+            // Waiter
+            section(class="box   w-100")
+
+              // Icon
+              div(class="box box-center   w-90p h-90p   m-0   border border-primary border-2p rounded-10p h2 text-primary")
+
+                i(class="fas fa-utensils")
+
+              // Section header
+              header(class="col   pr-0")
+
+                h3(class="mb-1   h6 font-weight-normal") Kelner
+                p(class="mb-1   ") 07/2017 - obecnie
+                p(class="mb-0   small") Hotel Millenium, Dębica
+
+              // Text
+              p(class="mb-0 mt-3") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure magni odit quidem dolor pariatur blanditiis ad ut beatae ipsam dolore est nobis, incidunt non molestias repudiandae illo mollitia. Sequi.
+
+            // Viewer service
+            section(class="box   w-100    mt-5")
+
+              // Icon
+              div(class="box box-center   w-90p h-90p   m-0   border border-primary border-2p rounded-10p h2 text-primary")
+
+                i(class="fas fa-film")
+
+              // Section header
+              header(class="col   pr-0")
+
+                h3(class="mb-1   h6 font-weight-normal") Obsługa Widza
+                p(class="mb-1   ") 03/2018 - 06/2018
+                p(class="mb-0   small") Cinema City Poland, Kraków, Bonarka
+
+              // Text
+              p(class="mb-0 mt-3") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure magni odit quidem dolor pariatur blanditiis ad ut beatae ipsam dolore est nobis, incidunt non molestias repudiandae illo mollitia. Sequi.
+
+            // Dealer
+            section(class="box   w-100    mt-5")
+
+              // Icon
+              div(class="box box-center   w-90p h-90p   m-0   border border-primary border-2p rounded-10p h2 text-primary")
+
+                i(class="fas fa-tshirt")
+
+              // Section header
+              header(class="col   pr-0")
+
+                h3(class="mb-1   h6 font-weight-normal") Sprzedawca
+                p(class="mb-1") 06/2017 - 09/2017 
+                p(class="mb-0   small") Reserved, Dębica
+
+              // Text
+              p(class="mb-0 mt-3") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure magni odit quidem dolor pariatur blanditiis ad ut beatae ipsam dolore est nobis, incidunt non molestias repudiandae illo mollitia. Sequi.
+
+            // Organizer of cultural activities
+            section(class="box   w-100    mt-5")
+
+              // Icon
+              div(class="box box-center   w-90p h-90p   m-0   border border-primary border-2p rounded-10p h2 text-primary")
+
+                i(class="fas fa-grin-beam")
+
+              // Section header
+              header(class="col   pr-0")
+
+                h3(class="mb-1   h6 font-weight-normal") Animator Kultury
+                p(class="mb-1   ") 08/2015 - 08/2015
+                p(class="mb-0   small") Czad Festival, Straszęcin
+
+              // Text
+              p(class="mb-0 mt-3") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure magni odit quidem dolor pariatur blanditiis ad ut beatae ipsam dolore est nobis, incidunt non molestias repudiandae illo mollitia. Sequi.
+        
+        // Contact with me
+        article(class="box box-center   w-100   mt-4 py-5   bg-gradient")
+        
+          h2(class="box box-center   w-100   text-center text-white")
+            span(class="w-100   mb-3   h4") Skontaktuj się ze mną
+            i(class="fas fa-envelope")
+
+        // Skills
+        article(class="box box-center   w-100   p-3")
+
+          // Header
+          header(class="box box-center   w-100   px-2 py-4")
+
+            h2(class="h3")
+
+              i(class="fas fa-user")
+              span(class="ml-3") Umiejętności
+          
+          // Body
+          div(class="box   w-100")
+
+            // Skill card
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-utensils   mt-1")
+                span(class="ml-3") Kelner, sprzedawca
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") Praca jako kelnerka i sprzedawca nauczyły mnie: <br> &bull; szybkiego tempa pracy <br> &bull; wytrzymałości fizycznej <br> &bull; dbania o zadowolenie klienta
+
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-film   mt-1")
+                span(class="ml-3") Obsługa Widza
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") Praca w kinie nauczyła mnie <b class="font-weight-bold">otwartości</b> w nawiązywaniu kontaktów z klientem.
+
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-hands-helping   mt-1")
+                span(class="ml-3") Wolontariat
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") Wolontariat w wielu placówkach wychowawczych nauczył mnie <b class="font-weight-bold">sumienności</b>, <b class="font-weight-bold">punktualności</b> i <b class="font-weight-bold">skrupulatności</b> w wykonywaniu swoich obowiązków
+
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-running   mt-1")
+                span(class="ml-3") Zajęcia dodatkowe
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") Wiele zajęć dodatkowych już podczas nauki szkolnej, ale i teraz podczas studiowania nauczyły mnie <b class="font-weight-bold">dobrej organizacji czasu</b>.
+
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-university   mt-1")
+                span(class="ml-3   text-center") Stowarzyszenie <br> All in UJ
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") Aktywność w stowarzyszeniu pozwoliła mi zdobyć umiejętność <b class="font-weight-bold">szybkiego podejmowania decyzji</b> i <b class="font-weight-bold">pracy pod presją czasu</b>. Aktywność ta również pozwala mi na <b class="font-weight-bold">wykorzystywanie mojej kreatywności</b> i <b class="font-weight-bold">zaangażowania w organizacje wydarzeń</b>.
+
+            section(class="col h-min-100p   mx-2 my-3 p-0   shadow")
+
+              // Card header
+              header(class="box box-center flex-nowrap   w-100   p-3   bg-primary text-white")
+
+                i(class="fas fa-user   mt-1")
+                span(class="ml-3   text-center") Umiejętności <br> dodatkowe
+
+              // Card body
+              div(class="w-100   p-3")
+
+                p(class="m-0") &bull; Posiadam prawo jazdy kategorii B <br> &bull; Posiadam praktyczną znajomość narzędzi MS Office - Excel, Word <br> <br> Wszystkie dotychczasowe aktywności pomogły mi nauczyć się <b class="font-weight-bold">podejmować inicjatywę</b> i <b class="font-weight-bold">działać samodzielnie</b>.
+
+        // Foreign languages
+        article(class="box box-center   w-100   p-3")
+
+          // Header
+          header(class="box box-center   w-100   mb-3 py-3")
+
+            h2(class="box box-center flex-nowrap   h3")
+
+              i(class="fas fa-globe-europe")
+              span(class="ml-2   text-center") Znajomość języków obcych
+          
+          // Body
+          div(class="box   w-100")
+          
+            // Language card
+            section(class="box   w-100   mt-4 p-2")
+              
+              div(class="box   w-100 h-min-100p   pt-4   border shadow rounded   position-relative")
+                
+                // Flag
+                div(class="w-80p   overflow-hidden rounded   position-absolute top-n15 left-n15")
+
+                  img(src="./images/gb.png" class="w-100" alt="Great Britain flag")
+
+                h3(class="w-100   mt-3   h5 font-weight-normal text-center") Język angielski
+
+                p(class="w-100   mt-3   text-center") <span class="small   opacity-5">stopień</span> <br> zaawansowany, B2
+          
+            // Language card
+            section(class="box   w-100   mt-4 p-2")
+              
+              div(class="box   w-100 h-min-100p   pt-4   border shadow rounded   position-relative")
+                
+                // Flag
+                div(class="w-80p   overflow-hidden rounded   position-absolute top-n15 left-n15")
+
+                  img(src="./images/germany.png" class="w-100" alt="Great Britain flag")
+
+                h3(class="w-100   mt-3   h5 font-weight-normal text-center") Język niemiecki
+
+                p(class="w-100   mt-3   text-center") <span class="small   opacity-5">stopień</span> <br> średni, A2
+          
+            // Language card
+            section(class="box   w-100   mt-4 p-2")
+              
+              div(class="box   w-100 h-min-100p   pt-4   border shadow rounded   position-relative")
+                
+                // Flag
+                div(class="w-80p   overflow-hidden rounded   position-absolute top-n15 left-n15")
+
+                  img(src="./images/spain.png" class="w-100" alt="Great Britain flag")
+
+                h3(class="w-100   mt-3   h5 font-weight-normal text-center") Język hiszpański
+
+                p(class="w-100   mt-3   text-center") <span class="small   opacity-5">stopień</span> <br> początek nauki
+
+        // Interests
+        article(class="box box-center   w-100   p-3   bg-dark-1")
+
+          // Header
+          header(class="box box-center   w-100   mb-3 py-3")
+
+            h2(class="box box-center flex-nowrap   h3   py-4")
+
+              i(class="fas fa-heart")
+              span(class="ml-2   text-center") Zainteresowania
+          
+          // Psychology
+          section(class="box   w-100   p-2")
+
+            // Photo
+            div(class="main__article__photo--interests   box   w-100   position-relative")
+              
+              div(class="box   w-100   rounded overflow-hidden")
+
+                img(src="./images/mind.png" class="w-100" alt="Brain image")
+
+            // Section header
+            header(class="box   w-100")
+
+              h3(class="main__article__heading--interests   box box-center   w-100   py-4   h5") <i class="mr-4">Psychologia</i>
+
+            // Text
+            p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro assumenda nobis, blanditiis asperiores, deleniti delectus reprehenderit ducimus quibusdam placeat, magni dicta suscipit id cumque omnis sit veniam qui. Laboriosam error eius quo aperiam libero deleniti corporis obcaecati ut aliquid laudantium.
+          
+          // Dancing
+          section(class="box   w-100   p-2")
+
+            // Photo
+            div(class="main__article__photo--interests   box   w-100   position-relative")
+              
+              div(class="box   w-100   rounded overflow-hidden")
+
+                img(src="./images/taniec.jpg" class="w-100" alt="Dancing image")
+
+            // Section header
+            header(class="box   w-100")
+
+              h3(class="main__article__heading--interests   box box-center   w-100   py-4   h5") <i class="mr-4">Taniec</i>
+
+            // Text
+            p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro assumenda nobis, blanditiis asperiores, deleniti delectus reprehenderit ducimus quibusdam placeat, magni dicta suscipit id cumque omnis sit veniam qui. Laboriosam error eius quo aperiam libero deleniti corporis obcaecati ut aliquid laudantium.
+          
+          // Theatre
+          section(class="box   w-100   p-2")
+
+            // Photo
+            div(class="main__article__photo--interests   box   w-100   position-relative")
+              
+              div(class="box   w-100   rounded overflow-hidden")
+
+                img(src="./images/teatr.jpg" class="w-100" alt="Brain image")
+
+            // Section header
+            header(class="box   w-100")
+
+              h3(class="main__article__heading--interests   box box-center   w-100   py-4   h5") <i class="mr-4">Teatr</i>
+
+            // Text
+            p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro assumenda nobis, blanditiis asperiores, deleniti delectus reprehenderit ducimus quibusdam placeat, magni dicta suscipit id cumque omnis sit veniam qui. Laboriosam error eius quo aperiam libero deleniti corporis obcaecati ut aliquid laudantium.
+          
+          // Traveling
+          section(class="box   w-100   p-2")
+
+            // Photo
+            div(class="main__article__photo--interests   box   w-100   position-relative")
+              
+              div(class="box   w-100   rounded overflow-hidden")
+
+                img(src="./images/podróże.jpg" class="w-100" alt="Brain image")
+
+            // Section header
+            header(class="box   w-100")
+
+              h3(class="main__article__heading--interests   box box-center   w-100   py-4   h5") <i class="mr-4">Podróże</i>
+
+            // Text
+            p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro assumenda nobis, blanditiis asperiores, deleniti delectus reprehenderit ducimus quibusdam placeat, magni dicta suscipit id cumque omnis sit veniam qui. Laboriosam error eius quo aperiam libero deleniti corporis obcaecati ut aliquid laudantium.
+
+        // Association
+        article(class="box   w-100   p-3")
+          
+          header(class="box box-center   w-100   px-2 py-4")
+
+            h2(class="box box-center flex-nowrap   h3   py-2")
+
+              i(class="fas fa-sitemap")
+              span(class="ml-3   text-center") Stowarzyszenia i organizacje
+
+          // Stowarzyszenie All in UJ
+          section(class="box   w-100   p-2")
+
+            // Section header
+            header(class="box   w-100")
+
+              h3(class="main__article__heading--associations   box box-center-y flex-nowrap   w-100   h5") Stowarzyszenie <br> All in UJ
+
+            // Body
+            div(class="box   w-100")
+
+              // Photo
+              div(class="w-100   my-4")
+
+                img(src="./images/allin.png" class="w-100" alt="All in UJ image")
+
+              // Text
+              p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ea magni provident quo quidem vitae explicabo possimus voluptatem nesciunt id optio eum deleniti facere sed iure in, nobis eveniet eos aut? Dignissimos maxime aliquid sit omnis quisquam laborum veritatis ullam.
+
+        // Contact
+        article(class="box   w-100   p-4   bg-gradient text-white")
+
+          header(class="box   w-100")
+            
+            h3(class="box   h6")
+              <span class="small opacity-8">Masz pytanie?</span>
+              <span class="mt-2   small opacity-8">Chcesz poprosić o pełne CV?</span>
+              <span class="mt-2   h4">Skontaktuj się ze mną</span>
+
+          form(class="box   w-100   mt-3")
+
+            div(class="form-group   w-100")
+
+              label(for="") Email
+              input(type="text" class="form-control   w-100")
+
+            div(class="form-group   w-100")
+
+              label(for="") Temat
+              input(type="text" class="form-control   w-100")
+
+            div(class="form-group   w-100")
+
+              label(for="") Treść
+              textarea(class="form-control   w-100" rows="5")
+
+            div(class="form-group   w-100   mb-0   text-center")
+
+              button(type="button" class="btn btn-light   w-100p   mt-2   rounded-10rem")
+                i(class="fas fa-paper-plane   text-primary")
+
+      // Footer
+      footer(class="footer   box   w-100   text-white")
+
+        ul(class="list-unstyled   w-100   m-0   p-4")
+
+          li(class="small") <a href="#" class="text-white">O mnie</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Wykształcenie</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Doświadczenie zawodowe</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Umiejętności</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Języki</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Zainteresowania</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Stowarzyszenia i organizacje</a>
+          li(class="mt-2   small") <a href="#" class="text-white">Kontakt</a>
+
+        // Social media
+        div(class="box box-center   w-100   mb-4")
+
+          a(href="#" class="btn btn-light   box box-center   w-40p h-40p   mr-3 p-0   text-primary rounded-10rem") <i class="fab fa-facebook-f"></i>
+          a(href="#" class="btn btn-light   box box-center   w-40p h-40p   p-0   text-primary rounded-10rem") <i class="fab fa-instagram"></i>
+
+        // Author
+        div(class="box   w-100   bg-dark")
+
+          p(class="box   w-100 h-100   p-2   bg-dark-3 small") <span class="ml-auto">Created by</span> <a href="#" class="ml-1   text-white">Bartłomiej Pyzocha</a>
+
+
+script(src="./scripts/main.js")
 
