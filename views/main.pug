@@ -19,9 +19,9 @@ html(lang="pl")
     div(class="container-fluid   p-0")
 
       // Header
-      header(id="header" class="header   box box-center   w-100 h-100vh   p-4   bg-gradient")
+      header(id="header" class="header   box box-center   w-100 h-100vh   px-4 pt-4 pb-5 p-sm-4   bg-gradient")
 
-        div(class="header__container   box   w-100 w-max-900p h-100 h-md-auto    rounded rounded-1rem overflow-hidden")
+        div(class="header__container   box   w-100 w-max-900p h-100 h-md-auto   mb-3 mb-sm-0    rounded rounded-1rem overflow-hidden")
 
           // Photo
           article(class="header__article--photo   box box-center   col-12 col-md-6 h-min-300p   px-0   overflow-hidden   position-relative")
@@ -39,38 +39,81 @@ html(lang="pl")
               span(class="d-none d-md-inline   px-0   h2") Gabriela Josypów
             
             // Go to btns
-            ul(class="list-unstyled   d-none d-md-block   w-100   my-auto")
-              li(class="box   w-100   mt-1") 
-                a(href="#about" class="header__info__a--go-to   box box-center-y   w-100") O mnie <i class="fas fa-user   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#education" class="header__info__a--go-to   box box-center-y   w-100") Wyszktałcenie <i class="fas fa-university   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#job" class="header__info__a--go-to   box box-center-y   w-100") Doświadczenie zawodowe <i class="fas fa-briefcase   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#skills" class="header__info__a--go-to   box box-center-y   w-100") Umiejętności <i class="fas fa-tools   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#languages" class="header__info__a--go-to   box box-center-y   w-100") Znajomość języków obcych <i class="fas fa-globe-europe   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#interests" class="header__info__a--go-to   box box-center-y   w-100") Zainteresowania <i class="fas fa-heart   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#associations" class="header__info__a--go-to   box box-center-y   w-100") Stowarzyszenia i organizacje <i class="fas fa-sitemap   ml-auto"></i>
-              li(class="box   w-100   mt-1") 
-                a(href="#contact" class="header__info__a--go-to   box box-center-y   w-100") Kontakt <i class="fas fa-envelope   ml-auto"></i>
-            
+            nav(class="box   w-100   my-auto")
+
+              ul(class="list-unstyled   d-none d-md-block   w-100")
+                li(class="box   w-100   mt-1") 
+                  a(href="#about" class="header__info__a--go-to   box box-center-y   w-100") O mnie <i class="fas fa-user   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#education" class="header__info__a--go-to   box box-center-y   w-100") Wyszktałcenie <i class="fas fa-university   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#job" class="header__info__a--go-to   box box-center-y   w-100") Doświadczenie zawodowe <i class="fas fa-briefcase   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#skills" class="header__info__a--go-to   box box-center-y   w-100") Umiejętności <i class="fas fa-tools   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#languages" class="header__info__a--go-to   box box-center-y   w-100") Znajomość języków obcych <i class="fas fa-globe-europe   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#interests" class="header__info__a--go-to   box box-center-y   w-100") Zainteresowania <i class="fas fa-heart   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#associations" class="header__info__a--go-to   box box-center-y   w-100") Stowarzyszenia i organizacje <i class="fas fa-sitemap   ml-auto"></i>
+                li(class="box   w-100   mt-1") 
+                  a(href="#contact" class="header__info__a--go-to   box box-center-y   w-100") Kontakt <i class="fas fa-envelope   ml-auto"></i>
+              
             // Action btns
             div(class="box box-center   w-100   mt-auto")
 
               a(href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   mx-1 p-0   rounded-10rem") <i class="fab fa-facebook-f"></i>
               a(href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   mx-1 p-0   rounded-10rem") <i class="fab fa-instagram"></i>
 
-              button(type="button" class="btn btn-primary   w-40p h-40p   mx-1 p-0   mt-auto   rounded-10rem")
+              a(href='#about' class="btn btn-primary   box box-center   w-40p h-40p   mx-1 p-0   mt-auto   rounded-10rem")
                 i(class="fas fa-arrow-down")
         
       // Main
       main(class="box   w-100")
 
+        // Side nav
+        nav(class="main__side-nav   box   w-100 w-max-sm-50p   bg-white rounded-sm-r-5p   position-fixed bottom-0 left-0   z-index-10")
+
+          ul(class="list-unstyled   box flex-nowrap flex-sm-column   w-100 w-max-sm-50p")
+            li(class="mx-auto")
+              a(href="#about" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--about   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-user")
+            li(class="mx-auto")
+              a(href="#education" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--education   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-university")
+            li(class="mx-auto")
+              a(href="#job" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--job   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-briefcase")
+            li(class="mx-auto")
+              a(href="#skills" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--skills   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-tools")
+            li(class="mx-auto")
+              a(href="#languages" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--languages   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-globe-europe")
+            li(class="mx-auto")
+              a(href="#interests" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--interests   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-heart")
+            li(class="mx-auto")
+              a(href="#associations" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--associations   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-sitemap")
+            li(class="mx-auto")
+              a(href="#contact" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--contact   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-envelope")
+            li(class="d-sm-none   mx-auto")
+              a(href="#header" class="main__side-nav__ul__li__btn main__side-nav__ul__li__btn--up   btn   box box-center   w-30p h-40p   position-relative")
+                span(class="position-absolute")
+                  i(class="fas fa-chevron-up")
+
         // About me
-        article(id="about" class="box box-start-y   w-100   p-3 p-sm-4")
+        article(id="about" class="main__article--content   box box-start-y   w-100   p-3 p-sm-4")
 
           // info
           div(class="box box-center   col-12 col-md-6   mt-lg-5 py-md-4 px-md-3 pl-lg-5 pr-lg-0")
@@ -94,7 +137,7 @@ html(lang="pl")
               img(src="./images/gaba2.jpg" class="w-100" alt="Gabriela Josypów image")
 
         // Education
-        article(id="education" class="main__article--education   box   w-100   p-3 p-lg-0   bg-primary text-white   position-relative")
+        article(id="education" class="main__article--content   main__article--education   box   w-100   p-3 p-lg-0   bg-primary text-white   position-relative")
 
           // High school
           section(class="main__education__school   box   w-100   p-2" style="display: none;")
@@ -146,7 +189,7 @@ html(lang="pl")
                   onclick="changeDisplay('.main__education__studies, .main__education__school', 'fadeIn, hide', '300, 0');  addClass('.main__education__btn--studies', 'active'); removeClass('.main__education__btn--school', 'active');")
         
         // Working exprience
-        article(id="job" class="box   w-100 w-max-900p   mx-auto p-3")
+        article(id="job" class="main__article--content   box   w-100 w-max-900p   mx-auto p-3")
 
           // Header
           header(class="box box-center   w-100   px-2 pb-5 pt-4 mt-2   text-primary")
@@ -239,7 +282,7 @@ html(lang="pl")
             i(class="fas fa-envelope")
 
         // Skills
-        article(id="skills" class="box box-center   w-100   p-3")
+        article(id="skills" class="main__article--content   box box-center   w-100   p-3")
 
           // Header
           header(class="box box-center   w-100   px-2 py-4   text-primary")
@@ -332,7 +375,7 @@ html(lang="pl")
                 p(class="m-0") &bull; Posiadam prawo jazdy kategorii B <br> &bull; Posiadam praktyczną znajomość narzędzi MS Office - Excel, Word <br> <br> Wszystkie dotychczasowe aktywności pomogły mi nauczyć się <b class="font-weight-bold">podejmować inicjatywę</b> i <b class="font-weight-bold">działać samodzielnie</b>.
 
         // Foreign languages
-        article(id="languages" class="box box-center   w-100   p-3 my-md-5")
+        article(id="languages" class="main__article--content   box box-center   w-100   p-3 my-md-5")
 
           // Header
           header(class="box box-center   w-100   mb-3 py-3   text-primary")
@@ -388,7 +431,7 @@ html(lang="pl")
                 p(class="w-100   mt-3   text-center") <span class="small   opacity-5">stopień</span> <br> początek nauki
 
         // Interests
-        article(id="interests" class="box box-center   w-100   p-3   bg-dark-1")
+        article(id="interests" class="main__article--content   box box-center   w-100   p-3   bg-dark-1")
 
           // Header
           header(class="box box-center   w-100   mb-3 py-3   text-primary")
@@ -482,7 +525,7 @@ html(lang="pl")
                 p(class="") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro assumenda nobis, blanditiis asperiores, deleniti delectus reprehenderit ducimus quibusdam placeat, magni dicta suscipit id cumque omnis sit veniam qui. Laboriosam error eius quo aperiam libero deleniti corporis obcaecati ut aliquid laudantium.
 
         // Associations
-        article(id="associations" class="box   w-100   p-3")
+        article(id="associations" class="main__article--content   box   w-100   p-3")
           
           header(class="box box-center   w-100   px-2 py-5   text-primary")
 
@@ -511,7 +554,7 @@ html(lang="pl")
               p(class="col-md   p-0 px-md-4 py-md-3") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ea magni provident quo quidem vitae explicabo possimus voluptatem nesciunt id optio eum deleniti facere sed iure in, nobis eveniet eos aut? Dignissimos maxime aliquid sit omnis quisquam laborum veritatis ullam.
 
         // Contact
-        article(id="contact" class="box   w-100   p-2 px-md-5   bg-gradient text-white")
+        article(id="contact" class="main__article--content   box   w-100   p-2 px-md-5   bg-gradient text-white")
 
           // Photo
           div(class="box   d-none d-lg-flex   col-6 p-5")
@@ -551,7 +594,7 @@ html(lang="pl")
 
                 button(type="button" class="btn btn-light   w-100p   mt-2   rounded-10rem")
                   i(class="fas fa-paper-plane   text-primary")
-
+  
       // Footer
       footer(class="footer   box   w-100   text-white")
 
@@ -581,7 +624,7 @@ html(lang="pl")
           p(class="box   w-100 h-100   p-2   bg-dark-3 small") <span class="ml-auto">Created by</span> <a href="#" class="ml-1   text-white">Bartłomiej Pyzocha</a>
     
       // Go to top btn
-      div(class="p-3   overflow-hidden   position-fixed bottom-0 right-0")
+      div(class="d-none d-sm-block   p-3   overflow-hidden   position-fixed bottom-0 right-0")
         a(href="#header" class="btn--go-top   btn   box box-center   w-50p h-50p   bg-dark-7 text-white") <i class="fas fa-chevron-up"></i>
 
 script(src="./scripts/main.js")

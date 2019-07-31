@@ -80,6 +80,29 @@ html {
 
 .main {
 
+  &__side-nav {
+
+    transition: 200ms ease-in-out;
+
+    &__ul {
+
+      &__li {
+
+        &__btn {
+
+          color: rgba(0, 0, 0, 0.32);
+
+          &:hover,
+          &:focus,
+          &.active {
+
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
   &__article {
 
     &__heading {
@@ -196,4 +219,24 @@ html {
     &.active { transform: translateX(0px); }
   }
 }
+
+
+@include media-breakpoint-up(sm){
+
+  .main {
+
+    &__side-nav {
+      
+      border-top-right-radius: 0.4rem;
+      border-bottom-right-radius: 0.4rem;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+
+      bottom: 50% !important;
+      transform: translate(-130%, 50%);
+
+      &.active { transform: translate(0%, 50%); }
+    }
+  }
+}
+
 

@@ -150,6 +150,8 @@ function scrollToBottom(elements, bottom, duration){
 
 
 //////////////////////////////////////////////////////// SCRIPTS RELATED TO THIS PROJECT
+
+// Show/hide go-to-top btn
 $(window).on('scroll resize orientationchange', function(){
 
   let btn = $('.btn--go-top');
@@ -157,10 +159,52 @@ $(window).on('scroll resize orientationchange', function(){
   if($(window).scrollTop() > 0){
     
     $(btn).addClass('active');
+    $('.main__side-nav__ul__li__btn--up').addClass('active');
 
   } else {
 
     $(btn).removeClass('active');
+    $('.main__side-nav__ul__li__btn--up').removeClass('active');
+  };
+});
+
+
+
+// Change styling of side nav menu btns
+$(window).on('scroll resize orientationchange', function(){
+
+  // Hide/show side nav menu on desktop
+  if($(window).scrollTop() > 0){
+
+    $('.main__side-nav').addClass('active');
+
+  } else {
+
+    $('.main__side-nav').removeClass('active');
+  };
+
+  // Get main articles
+  let articles = $('.main__article--content');
+
+  // Loop through articles
+  for(let article of articles){
+    
+    // If article is now viewed
+    if($(article).offset().top - $(window).scrollTop() > -$(article).outerHeight() + 200
+      && $(article).offset().top - $(window).scrollTop() <= 200){
+
+      let id = $(article).attr('id');
+
+      $('.main__side-nav__ul__li__btn').not($('.main__side-nav__ul__li__btn--up')).removeClass('active');
+      $('.main__side-nav__ul__li__btn--' + id).addClass('active');
+
+      break;
+      
+    // if article is not viewed
+    } else if($(article).offset().top - $(window).scrollTop() > 200){
+      
+      $('.main__side-nav__ul__li__btn').not($('.main__side-nav__ul__li__btn--up')).removeClass('active');
+    };
   };
 });
 
