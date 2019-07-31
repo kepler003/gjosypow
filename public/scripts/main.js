@@ -152,4 +152,3 @@ function scrollToBottom(elements, bottom, duration){
 //////////////////////////////////////////////////////// SCRIPTS RELATED TO THIS PROJECT
 
 
-

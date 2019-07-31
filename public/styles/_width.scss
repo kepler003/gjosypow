@@ -6,6 +6,8 @@
 .w {
 
     &-auto { width: auto !important; }
+    &-max-inherit { max-width: inherit !important; }
+    &-max-stretch { max-width: stretch !important; }
 
     @for $i from 3 through 20 {
         &-#{$i}00p { width: 100px * $i !important }
@@ -27,6 +29,8 @@
     .w {
 
         &-sm-auto { width: auto !important; }
+        &-max-sm-inherit { max-width: inherit !important; }
+        &-max-sm-stretch { max-width: stretch !important; }
 
         @for $i from 3 through 20 {
             &-sm-#{$i}00p { width: 100px * $i !important }
@@ -49,6 +53,8 @@
     .w {
         
         &-md-auto { width: auto !important; }
+        &-max-md-inherit { max-width: inherit !important; }
+        &-max-md-stretch { max-width: stretch !important; }
     
         @for $i from 3 through 20 {
             &-md-#{$i}00p { width: 100px * $i !important }
@@ -71,6 +77,8 @@
     .w {
         
         &-lg-auto { width: auto !important; }
+        &-max-lg-inherit { max-width: inherit !important; }
+        &-max-lg-stretch { max-width: stretch !important; }
 
         @for $i from 3 through 20 {
             &-lg-#{$i}00p { width: 100px * $i !important }
@@ -93,6 +101,8 @@
     .w {
         
         &-xl-auto { width: auto !important; }
+        &-max-xl-inherit { max-width: inherit !important; }
+        &-max-xl-stretch { max-width: stretch !important; }
     
         @for $i from 3 through 20 {
             &-xl-#{$i}00p { width: 100px * $i !important }
