@@ -48975,6 +48975,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.header__container {
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
 .header__info__a--go-to {
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
