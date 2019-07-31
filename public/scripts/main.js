@@ -150,5 +150,17 @@ function scrollToBottom(elements, bottom, duration){
 
 
 //////////////////////////////////////////////////////// SCRIPTS RELATED TO THIS PROJECT
+$(window).on('scroll resize orientationchange', function(){
 
+  let btn = $('.btn--go-top');
+
+  if($(window).scrollTop() > 0){
+    
+    $(btn).addClass('active');
+
+  } else {
+
+    $(btn).removeClass('active');
+  };
+});
 

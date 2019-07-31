@@ -181,3 +181,14 @@ html {
   background-color: #121A25;
 }
 
+.btn {
+
+  &--go-top {
+
+    transition: 300ms ease-in-out;
+    transform: translateX(100px);
+
+    &.active { transform: translateX(0px); }
+  }
+}
+

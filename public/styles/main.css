@@ -49038,4 +49038,16 @@ html {
 .footer {
   background-color: #121A25;
 }
+
+.btn--go-top {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.btn--go-top.active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
 /*# sourceMappingURL=main.css.map */

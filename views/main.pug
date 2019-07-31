@@ -19,7 +19,7 @@ html(lang="pl")
     div(class="container-fluid   p-0")
 
       // Header
-      header(class="header   box align-items-md-start align-content-md-center justify-content-md-center   w-100 h-100vh   p-4 pb-md-5 pt-md-0   bg-gradient")
+      header(id="header" class="header   box align-items-md-start align-content-md-center justify-content-md-center   w-100 h-100vh   p-4 pb-md-5 pt-md-0   bg-gradient")
 
         div(class="box   w-100 w-max-900p h-100 h-md-auto    rounded rounded-1rem overflow-hidden")
 
@@ -579,7 +579,10 @@ html(lang="pl")
         div(class="box   w-100   bg-dark-10")
 
           p(class="box   w-100 h-100   p-2   bg-dark-3 small") <span class="ml-auto">Created by</span> <a href="#" class="ml-1   text-white">Bartłomiej Pyzocha</a>
-
+    
+      // Go to top btn
+      div(class="p-3   overflow-hidden   position-fixed bottom-0 right-0")
+        a(href="#header" class="btn--go-top   btn   box box-center   w-50p h-50p   bg-dark-7 text-white") <i class="fas fa-chevron-up"></i>
 
 script(src="./scripts/main.js")
 
