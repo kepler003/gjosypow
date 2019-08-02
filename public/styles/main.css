@@ -49098,8 +49098,8 @@ html {
   .main__side-nav {
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
     bottom: 50% !important;
     -webkit-transform: translate(-130%, 50%);
             transform: translate(-130%, 50%);
