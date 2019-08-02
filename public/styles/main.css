@@ -7209,13 +7209,15 @@ button.bg-secondary:focus {
   background-color: #545b62 !important;
 }
 
-.bg-success {
+.bg-success, .box--notifications.success {
   background-color: #28a745 !important;
 }
 
-a.bg-success:hover, a.bg-success:focus,
+a.bg-success:hover, a.box--notifications.success:hover, a.bg-success:focus, a.box--notifications.success:focus,
 button.bg-success:hover,
-button.bg-success:focus {
+button.box--notifications.success:hover,
+button.bg-success:focus,
+button.box--notifications.success:focus {
   background-color: #1e7e34 !important;
 }
 
@@ -7239,13 +7241,15 @@ button.bg-warning:focus {
   background-color: #d39e00 !important;
 }
 
-.bg-danger {
+.bg-danger, .box--notifications.error {
   background-color: #dc3545 !important;
 }
 
-a.bg-danger:hover, a.bg-danger:focus,
+a.bg-danger:hover, a.box--notifications.error:hover, a.bg-danger:focus, a.box--notifications.error:focus,
 button.bg-danger:hover,
-button.bg-danger:focus {
+button.box--notifications.error:hover,
+button.bg-danger:focus,
+button.box--notifications.error:focus {
   background-color: #bd2130 !important;
 }
 
@@ -49067,6 +49071,27 @@ html {
 .btn--go-top.active {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+}
+
+.box--notifications {
+  opacity: 0.8;
+  -webkit-transform: translateX(calc(100% + 20px));
+          transform: translateX(calc(100% + 20px));
+  -webkit-transition: 250ms cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 250ms cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.box--notifications p.error {
+  display: none;
+}
+
+.box--notifications.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.box--notifications.error p.error {
+  display: inline;
 }
 
 @media (min-width: 576px) {

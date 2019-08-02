@@ -573,28 +573,28 @@ html(lang="pl")
                 <span class="mt-2   small opacity-8">Chcesz poprosić o pełne CV?</span>
                 <span class="mt-2   h4">Skontaktuj się ze mną</span>
 
-            form(class="box   w-100   mt-3")
+            form(action="/email" method="post" class="box   w-100   mt-3")
 
               div(class="form-group   w-100")
 
-                label(for="") Email
-                input(type="text" class="form-control   w-100")
+                label(for="email") Email
+                input(type="email" class="form-control   w-100" id="email" name="email")
 
               div(class="form-group   w-100")
 
-                label(for="") Temat
-                input(type="text" class="form-control   w-100")
+                label(for="subject") Temat
+                input(type="text" class="form-control   w-100" id="subject" name="subject")
 
               div(class="form-group   w-100")
 
-                label(for="") Treść
-                textarea(class="form-control   w-100" rows="5")
+                label(for="message") Treść
+                textarea(class="form-control   w-100" rows="5" id="message" name="message")
 
               div(class="form-group   w-100   mb-0   text-center")
 
-                button(type="button" class="btn btn-light   w-100p   mt-2   rounded-10rem")
+                button(type="button" class="btn--send-email   btn btn-light   w-100p   mt-2   rounded-10rem")
                   i(class="fas fa-paper-plane   text-primary")
-  
+
       // Footer
       footer(class="footer   box   w-100   text-white")
 
@@ -626,6 +626,13 @@ html(lang="pl")
       // Go to top btn
       div(class="d-none d-sm-block   p-3   overflow-hidden   position-fixed bottom-0 right-0")
         a(href="#header" class="btn--go-top   btn   box box-center   w-50p h-50p   bg-dark-7 text-white") <i class="fas fa-chevron-up"></i>
+
+      // Notifications
+      div(class="box--notifications   box   w-100 w-max-250p   p-3   position-fixed top-10 right-10 bg-success rounded text-white")
+
+        p(class="error   w-100   h5") Error!
+        p(class="message   w-100   mb-0")
+
 
 script(src="./scripts/main.js")
 

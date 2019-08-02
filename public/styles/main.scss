@@ -220,6 +220,30 @@ html {
   }
 }
 
+.box {
+
+  &--notifications {
+
+    opacity: 0.8;
+    transform: translateX(calc(100% + 20px));
+
+    transition: 250ms cubic-bezier(.6,.0,.4,1);
+
+    & p.error { display: none; }
+
+    &.active {
+      transform: translateX(0%);
+    }
+
+    &.success { @extend .bg-success; }
+    &.error {
+      @extend .bg-danger;
+
+      & p.error { display: inline; }    
+    }
+  }
+}
+
 
 @include media-breakpoint-up(sm){
 
