@@ -215,53 +215,92 @@ $(window).on('scroll resize orientationchange', function(){
 
 $('.btn--send-email').click( function(){
 
-  $.ajax({
-    url: '/email',
-    method: 'POST',
-    dataType: 'json',
-    data: {email: $('#email').val(), subject: $('#subject').val(), message: $('#message').val()},
-    success: async function(response){
+  let canAct = true;
 
-      let act = async () => {
+  let email = $('#email').val();
+  let subject = $('#subject').val();
+  let message = $('#message').val();
+  
+  let notification = '';
 
-        // Clear form inputs
-        $('#email, #subject, #message').val('');
+  if(!validator.isEmail(email)){
+    canAct = false;
+    notification += 'Niepoprawny adres email.';
+  };
 
-        // If response type == success
-        if(response.type == "success"){
+  if(validator.isEmpty(subject)){
+    canAct = false;
+    notification += ' Niepoprawny temat wiadomości.';
+  };
 
-          $('.box--notifications').removeClass('error').addClass('active success');
-          $('.box--notifications p.message').text(response.message);
-        
-          // If error
-        } else if(response.type == "error"){
+  if(validator.isEmpty(message)){
+    canAct = false;
+    notification += ' Niepoprawny tekst wiadomości';
+  };
 
-          $('.box--notifications').removeClass('success').addClass('active error');
-          $('.box--notifications p.message').text(response.message);
+  if(!canAct){
+
+    // Show notification
+    $('.box--notifications').removeClass('success').addClass('active error');
+    $('.box--notifications p.message').text(notification);
+
+    // Hide notification box after duration
+    setTimeout(function(){
+      $('.box--notifications').removeClass('active');
+    }, 5000);
+    
+  } else if(canAct){
+
+    $.ajax({
+      url: '/email',
+      method: 'POST',
+      dataType: 'json',
+      data: {email: $('#email').val(), subject: $('#subject').val(), message: $('#message').val()},
+      success: async function(response){
+
+        let act = async () => {
+
+          // Clear form inputs
+          $('#email, #subject, #message').val('');
+
+          // If response type == success
+          if(response.type == "success"){
+
+            $('.box--notifications').removeClass('error').addClass('active success');
+            $('.box--notifications p.message').text(response.message);
+          
+            // If error
+          } else if(response.type == "error"){
+
+            $('.box--notifications').removeClass('success').addClass('active error');
+            $('.box--notifications p.message').text(response.message);
+          };
+          
+          // Define duraition (time to hide notifictions)
+          let duration;
+          if(response.type == "success"){
+            duration = 3000;
+          } else if(response.type == "error"){
+            duration = 5000;
+          };
+
+          // Hide notification box after duration
+          setTimeout(function(){
+            $('.box--notifications').removeClass('active');
+          }, duration);
         };
-        
-        // Define duraition (time to hide notifictions)
-        let duration;
-        if(response.type == "success"){
-          duration = 3000;
-        } else if(response.type == "error"){
-          duration = 5000;
-        };
-
-        // Hide notification box after duration
-        setTimeout(function(){
-          $('.box--notifications').removeClass('active');
-        }, duration);
-      };
 
 
 
-      await act();
-    },
-    error: function(e){
+        await act();
+      },
+      error: function(e){
 
-      // Console log error
-      console.log(e);
-    }
-  });
+        // Console log error
+        console.log(e);
+      }
+    });
+  };
+  
+
 });
